@@ -1,0 +1,20 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'giphy-sample-ios' do
+pod 'NotificationBannerSwift', '~> 3.0.0'
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for giphy-sample-ios
+
+  target 'giphy-sample-iosTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'giphy-sample-iosUITests' do
+    # Pods for testing
+  end
+
+end

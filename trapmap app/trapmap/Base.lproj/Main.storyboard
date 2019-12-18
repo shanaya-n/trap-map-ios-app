@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qJk-IZ-9OC">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="trapmap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="peZ-90-bbh">
+                                <rect key="frame" x="84" y="483" width="246" height="81.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Trap Map">
+                                        <attributes>
+                                            <font key="NSFont" size="68" name="BodoniSvtyTwoSCITCTT-Book"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="wU3-GD-O7n">
+                                <rect key="frame" x="93" y="339.66666666666669" width="228" height="277.00000000000006"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxX-4U-vNT">
+                                        <rect key="frame" x="0.0" y="0.0" width="228" height="59"/>
+                                        <accessibility key="accessibilityConfiguration" label="FindEventsButton"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="39"/>
+                                        <state key="normal" title="Find Events">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="r7K-CV-0ft" kind="show" id="W7n-ul-gbO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EuZ-9r-8jz" userLabel="PublishEventsButton">
+                                        <rect key="frame" x="0.0" y="109" width="228" height="59"/>
+                                        <accessibility key="accessibilityConfiguration" label="PublishEventsButton"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="39"/>
+                                        <state key="normal" title="Publish Events">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="RgG-WY-5BL" kind="show" id="zbH-gd-pjb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIs-gJ-y0P" userLabel="FindVenuesButton">
+                                        <rect key="frame" x="0.0" y="217.99999999999994" width="228" height="59"/>
+                                        <accessibility key="accessibilityConfiguration" label="FindVenuesButton"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="39"/>
+                                        <state key="normal" title="Find Venues">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="f2L-eC-yPa" kind="show" id="9AN-AL-ps7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wU3-GD-O7n" firstAttribute="top" relation="greaterThanOrEqual" secondItem="peZ-90-bbh" secondAttribute="bottom" constant="80" id="8jn-GF-2Qn"/>
+                            <constraint firstItem="peZ-90-bbh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ron-Rg-vpb"/>
+                            <constraint firstItem="wU3-GD-O7n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wda-HB-kEu"/>
+                            <constraint firstItem="wU3-GD-O7n" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="30" id="wlR-7N-dmW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0Gg-TD-UDQ"/>
+                    <connections>
+                        <outlet property="findEventsButton" destination="bxX-4U-vNT" id="VN1-b8-oqe"/>
+                        <outlet property="findVenuesButton" destination="bIs-gJ-y0P" id="5DY-7X-7wH"/>
+                        <outlet property="publishEventsButton" destination="EuZ-9r-8jz" id="3JE-2z-KAj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1075.3623188405797" y="40.848214285714285"/>
+        </scene>
+        <!--Search Result Table View Controller-->
+        <scene sceneID="2Ss-HD-qHc">
+            <objects>
+                <tableViewController storyboardIdentifier="SearchResultTableViewController" id="ctl-AX-s2u" customClass="SearchResultTableViewController" customModule="trapmap" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="djr-g4-55G">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Events" id="Dg2-Ez-IUF" customClass="SearchResultCollectionViewCell" customModule="trapmap" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dg2-Ez-IUF" id="5hd-sy-g3b">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" label="EventsTable"/>
+                                <connections>
+                                    <segue destination="tkY-vD-sW6" kind="show" identifier="showEvent" id="Jy7-lQ-YHU"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ctl-AX-s2u" id="jDe-Aa-Dvo"/>
+                            <outlet property="delegate" destination="ctl-AX-s2u" id="bwk-IT-VBb"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="rDp-cW-NQB"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AoD-bv-39w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3138" y="42"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1Ls-xY-ejs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qJk-IZ-9OC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iOJ-mI-ZLv">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="NK5-OC-bJj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="smw-eW-Ee3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="103" y="42"/>
+        </scene>
+        <!--Find Events View Controller-->
+        <scene sceneID="A0F-qJ-4k4">
+            <objects>
+                <viewController id="r7K-CV-0ft" customClass="FindEventsViewController" customModule="trapmap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZzE-jG-gWV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Loc-br-0QR">
+                                <rect key="frame" x="48" y="283" width="318" height="82"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Find Events">
+                                        <attributes>
+                                            <font key="NSFont" size="68" name="BodoniSvtyTwoSCITCTT-Book"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" prompt="Enter a location" placeholder="Location or Event ID" translatesAutoresizingMaskIntoConstraints="NO" id="k2t-om-zXI" userLabel="SearchBar">
+                                <rect key="frame" x="34" y="396" width="346" height="90"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbc-la-dGt">
+                                <rect key="frame" x="100" y="496" width="214" height="33"/>
+                                <accessibility key="accessibilityConfiguration" label="SearchBarSearchButton"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="17"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ctl-AX-s2u" kind="show" identifier="searchEventsFromSearchBar" id="seG-Nh-wnb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="wbc-la-dGt" firstAttribute="leading" secondItem="RVV-bI-HYl" secondAttribute="leading" constant="100" id="2BA-Ba-6Df"/>
+                            <constraint firstItem="RVV-bI-HYl" firstAttribute="bottom" secondItem="wbc-la-dGt" secondAttribute="bottom" constant="333" id="4De-eo-Wja"/>
+                            <constraint firstItem="wbc-la-dGt" firstAttribute="centerX" secondItem="k2t-om-zXI" secondAttribute="centerX" id="EZ8-9f-hpU"/>
+                            <constraint firstItem="Loc-br-0QR" firstAttribute="centerX" secondItem="k2t-om-zXI" secondAttribute="centerX" id="Ljw-1p-yFZ"/>
+                            <constraint firstItem="k2t-om-zXI" firstAttribute="leading" secondItem="RVV-bI-HYl" secondAttribute="leading" constant="34" id="QPM-jh-bv2"/>
+                            <constraint firstItem="wbc-la-dGt" firstAttribute="top" secondItem="k2t-om-zXI" secondAttribute="bottom" constant="10" id="TVX-Bt-roc"/>
+                            <constraint firstItem="Loc-br-0QR" firstAttribute="top" secondItem="RVV-bI-HYl" secondAttribute="top" constant="195" id="kfI-TD-tmq"/>
+                            <constraint firstItem="wbc-la-dGt" firstAttribute="centerX" secondItem="ZzE-jG-gWV" secondAttribute="centerX" id="mjJ-D3-LbY"/>
+                            <constraint firstItem="wbc-la-dGt" firstAttribute="centerX" secondItem="Loc-br-0QR" secondAttribute="centerX" id="njU-FU-I9E"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RVV-bI-HYl"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wzT-Xe-bam"/>
+                    <connections>
+                        <outlet property="searchBar" destination="k2t-om-zXI" id="A1T-P4-6EF"/>
+                        <outlet property="searchButton" destination="wbc-la-dGt" id="wIq-qz-OGR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ljx-je-ohb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2060.8695652173915" y="41.517857142857139"/>
+        </scene>
+        <!--Find Venues View Controller-->
+        <scene sceneID="hct-kH-lme">
+            <objects>
+                <viewController id="f2L-eC-yPa" customClass="FindVenuesViewController" customModule="trapmap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xd9-3Q-OgS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WtT-gr-bgO">
+                                <rect key="frame" x="45.666666666666657" y="269.66666666666669" width="323" height="81.333333333333314"/>
+                                <accessibility key="accessibilityConfiguration" label="FindVenuesLabel"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Find Venues">
+                                        <attributes>
+                                            <font key="NSFont" size="68" name="BodoniSvtyTwoSCITCTT-Book"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" prompt="Enter a venue name" placeholder="Location or Keyword" translatesAutoresizingMaskIntoConstraints="NO" id="Qsh-XH-loW">
+                                <rect key="frame" x="34" y="380" width="346" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="346" id="mVy-jy-tV2"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NlA-pl-Z9o">
+                                <rect key="frame" x="183.66666666666666" y="480" width="47" height="33"/>
+                                <accessibility key="accessibilityConfiguration" label="VenueSearchButton"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="17"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="zql-2B-z8h" kind="show" identifier="findVenues" id="e5j-0g-zqQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Qsh-XH-loW" firstAttribute="centerX" secondItem="WtT-gr-bgO" secondAttribute="centerX" id="2oZ-Wh-3QO"/>
+                            <constraint firstItem="Qsh-XH-loW" firstAttribute="top" secondItem="Xd9-3Q-OgS" secondAttribute="top" constant="380" id="6nQ-Sd-W0v"/>
+                            <constraint firstItem="WtT-gr-bgO" firstAttribute="top" relation="greaterThanOrEqual" secondItem="WKY-KZ-gs0" secondAttribute="top" constant="35" id="GAQ-0o-OLy"/>
+                            <constraint firstItem="Qsh-XH-loW" firstAttribute="top" secondItem="WtT-gr-bgO" secondAttribute="bottom" constant="29" id="aD4-gE-VCS"/>
+                            <constraint firstItem="WtT-gr-bgO" firstAttribute="centerX" secondItem="Xd9-3Q-OgS" secondAttribute="centerX" id="b52-rs-a8n"/>
+                            <constraint firstItem="NlA-pl-Z9o" firstAttribute="centerX" secondItem="Xd9-3Q-OgS" secondAttribute="centerX" id="dXp-un-8C3"/>
+                            <constraint firstItem="NlA-pl-Z9o" firstAttribute="top" secondItem="Qsh-XH-loW" secondAttribute="bottom" constant="10" id="dgC-xP-CaK"/>
+                            <constraint firstItem="Qsh-XH-loW" firstAttribute="centerX" secondItem="NlA-pl-Z9o" secondAttribute="centerX" id="lZs-CV-ZJL"/>
+                            <constraint firstItem="Qsh-XH-loW" firstAttribute="centerX" secondItem="Xd9-3Q-OgS" secondAttribute="centerX" id="qkK-iA-1HY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WKY-KZ-gs0"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xsp-7P-mgQ"/>
+                    <connections>
+                        <outlet property="searchBar" destination="Qsh-XH-loW" id="BJz-jV-SSU"/>
+                        <outlet property="searchButton" destination="NlA-pl-Z9o" id="3ao-Cu-d0J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fMp-eP-HRS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2082.608695652174" y="781.47321428571422"/>
+        </scene>
+        <!--Find Venues Table View Controller-->
+        <scene sceneID="mWg-0Y-4oF">
+            <objects>
+                <tableViewController storyboardIdentifier="FindVenuesTableViewController" id="zql-2B-z8h" customClass="FindVenuesTableViewController" customModule="trapmap" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="85z-5m-qkN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VenueCell" id="5UC-nn-0dE">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5UC-nn-0dE" id="0dP-Cd-bcN">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" label="VenuesTable"/>
+                                <connections>
+                                    <segue destination="viv-jW-Nxo" kind="show" identifier="showVenuePage" id="96g-0q-uhs"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="zql-2B-z8h" id="Wjo-Uf-7Zm"/>
+                            <outlet property="delegate" destination="zql-2B-z8h" id="JqB-w0-aD9"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="tSV-gC-eQV"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZnS-Nr-Smb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3138" y="781"/>
+        </scene>
+        <!--Venue Page View Controller-->
+        <scene sceneID="fPq-iw-92T">
+            <objects>
+                <viewController id="viv-jW-Nxo" customClass="VenuePageViewController" customModule="trapmap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ryj-hK-7eS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="HZx-hk-gef">
+                                <rect key="frame" x="99" y="30" width="216" height="156"/>
+                                <accessibility key="accessibilityConfiguration" identifier="VenueNameLabel"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Venue">
+                                        <attributes>
+                                            <font key="NSFont" size="65" name="BodoniSvtyTwoSCITCTT-Book"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="SzQ-70-16O">
+                                <rect key="frame" x="156.33333333333334" y="377" width="101.66666666666666" height="102.66666666666669"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="City:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cax-0g-6n2">
+                                        <rect key="frame" x="0.0" y="0.0" width="101.66666666666667" height="31.333333333333332"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="CityNameLabel"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Venue ID:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9r-Nk-3M2">
+                                        <rect key="frame" x="0.0" y="71.333333333333314" width="101.66666666666667" height="31.333333333333329"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="IdLabel"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9W2-U6-pzd">
+                                <rect key="frame" x="157" y="757" width="100" height="43"/>
+                                <accessibility key="accessibilityConfiguration" label="ChooseVenueButton"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="DNh-4J-kNC"/>
+                                </constraints>
+                                <state key="normal" title="Choose Venue"/>
+                                <connections>
+                                    <segue destination="RgG-WY-5BL" kind="show" identifier="chooseVenueForPublish" id="QQS-UD-cN8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="HZx-hk-gef" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Qzm-zq-QMm" secondAttribute="top" constant="35" id="3u2-zV-VYT"/>
+                            <constraint firstItem="Qzm-zq-QMm" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="9W2-U6-pzd" secondAttribute="bottom" constant="15" id="BKT-85-cY5"/>
+                            <constraint firstItem="HZx-hk-gef" firstAttribute="centerX" secondItem="Ryj-hK-7eS" secondAttribute="centerX" id="TAI-ak-tVc"/>
+                            <constraint firstItem="9W2-U6-pzd" firstAttribute="centerX" secondItem="SzQ-70-16O" secondAttribute="centerX" id="acD-hs-Knk"/>
+                            <constraint firstItem="SzQ-70-16O" firstAttribute="centerY" relation="greaterThanOrEqual" secondItem="Ryj-hK-7eS" secondAttribute="centerY" constant="20" id="lTJ-nL-cxX"/>
+                            <constraint firstItem="SzQ-70-16O" firstAttribute="centerX" secondItem="Ryj-hK-7eS" secondAttribute="centerX" id="ulI-jo-LUg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qzm-zq-QMm"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PuL-6O-8SV"/>
+                    <connections>
+                        <outlet property="chooseVenueButton" destination="9W2-U6-pzd" id="F1C-VV-3GX"/>
+                        <outlet property="cityLabel" destination="cax-0g-6n2" id="C3l-hI-U2Q"/>
+                        <outlet property="idLabel" destination="c9r-Nk-3M2" id="PqD-RG-KHy"/>
+                        <outlet property="venueNameLabel" destination="HZx-hk-gef" id="jxk-aM-hYT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cdn-DE-MaR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4395.652173913044" y="800.89285714285711"/>
+        </scene>
+        <!--Publish Event Form View Controller-->
+        <scene sceneID="toY-0h-pZ3">
+            <objects>
+                <viewController storyboardIdentifier="PublishEventFormViewController" id="RgG-WY-5BL" customClass="PublishEventFormViewController" customModule="trapmap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xrz-k8-FIq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="CgT-jc-0Kl">
+                                <rect key="frame" x="21" y="92" width="372.33333333333331" height="81.5"/>
+                                <accessibility key="accessibilityConfiguration" label="PublishEventLabel"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Publish Event">
+                                        <attributes>
+                                            <font key="NSFont" size="68" name="BodoniSvtyTwoSCITCTT-Book"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kVX-O0-SxD">
+                                <rect key="frame" x="47" y="478.00000000000006" width="320" height="514"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Event Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nZ7-Zm-Uwa">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="34"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="EventNameField"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <searchBar contentMode="redraw" text="" placeholder="Search Venues (ex: The Forum)" translatesAutoresizingMaskIntoConstraints="NO" id="gZs-lh-fdO">
+                                        <rect key="frame" x="0.0" y="54" width="320" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="u9M-Tt-y3A"/>
+                                        </constraints>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Odp-1Y-zhD">
+                                        <rect key="frame" x="0.0" y="119" width="320" height="33"/>
+                                        <accessibility key="accessibilityConfiguration" label="VenueSearchButton"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="17"/>
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Search Venues">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="zql-2B-z8h" kind="show" id="Tql-Nh-daP"/>
+                                        </connections>
+                                    </button>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="m46-y6-ide">
+                                        <rect key="frame" x="0.0" y="172" width="320" height="216"/>
+                                    </datePicker>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AzL-x1-lGV">
+                                        <rect key="frame" x="0.0" y="408" width="320" height="34"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="DescriptionField"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits" textContentType="location"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gM1-bk-aL1">
+                                        <rect key="frame" x="0.0" y="462" width="320" height="52"/>
+                                        <accessibility key="accessibilityConfiguration" label="PublishButton"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="33"/>
+                                        <state key="normal" title="Publish">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="tkY-vD-sW6" kind="show" identifier="publishEvent" id="L2T-Iy-Eey"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kVX-O0-SxD" firstAttribute="top" relation="greaterThanOrEqual" secondItem="CgT-jc-0Kl" secondAttribute="bottom" constant="40" id="0Wg-rI-jfY"/>
+                            <constraint firstItem="CgT-jc-0Kl" firstAttribute="centerX" secondItem="xrz-k8-FIq" secondAttribute="centerX" id="5uQ-h7-Fq0"/>
+                            <constraint firstItem="kVX-O0-SxD" firstAttribute="centerY" relation="greaterThanOrEqual" secondItem="xrz-k8-FIq" secondAttribute="centerY" constant="30" id="cgB-dS-UkW"/>
+                            <constraint firstItem="kVX-O0-SxD" firstAttribute="centerX" secondItem="xrz-k8-FIq" secondAttribute="centerX" id="g0q-vY-BMx"/>
+                            <constraint firstItem="CgT-jc-0Kl" firstAttribute="top" relation="greaterThanOrEqual" secondItem="2Aa-jt-Edc" secondAttribute="top" constant="15" id="rCS-91-Ep4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2Aa-jt-Edc"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SSQ-uo-h3v"/>
+                    <connections>
+                        <outlet property="datePicker" destination="m46-y6-ide" id="6OB-gL-Kh2"/>
+                        <outlet property="descriptionField" destination="AzL-x1-lGV" id="ys4-GU-3Ze"/>
+                        <outlet property="eventNameField" destination="nZ7-Zm-Uwa" id="N2z-gt-5i8"/>
+                        <outlet property="publishEventLabel" destination="CgT-jc-0Kl" id="zwO-RR-6lQ"/>
+                        <outlet property="stackView" destination="kVX-O0-SxD" id="8m7-Nj-vjl"/>
+                        <outlet property="venueSearchBar" destination="gZs-lh-fdO" id="8eb-hS-mL4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aa6-dN-eX0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2060.8695652173915" y="1522.7678571428571"/>
+        </scene>
+        <!--Event Page View Controller-->
+        <scene sceneID="032-LG-Mb3">
+            <objects>
+                <viewController id="tkY-vD-sW6" customClass="EventPageViewController" customModule="trapmap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8hw-sM-XIr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="MA1-FV-QB3">
+                                <rect key="frame" x="114.33333333333333" y="123" width="185.33333333333337" height="81.666666666666686"/>
+                                <accessibility key="accessibilityConfiguration" identifier="EventNameLabel"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Concert">
+                                        <attributes>
+                                            <font key="NSFont" size="55" name="BodoniSvtyTwoSCITCTT-Book"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="GPX-6G-UJq">
+                                <rect key="frame" x="157.66666666666666" y="582" width="98.666666666666657" height="152"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Time:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMo-f2-LVG">
+                                        <rect key="frame" x="0.0" y="0.0" width="98.666666666666671" height="24"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="StartTimeLabel"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="rIh-HK-6ED">
+                                        <rect key="frame" x="0.0" y="64" width="98.666666666666671" height="24"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="LocationLabel"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="023-Kk-toV">
+                                        <rect key="frame" x="0.0" y="128" width="98.666666666666671" height="24"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="DescriptionLabel"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="MA1-FV-QB3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="2qM-mQ-sQa" secondAttribute="top" constant="35" id="379-Nb-oc0"/>
+                            <constraint firstItem="GPX-6G-UJq" firstAttribute="centerY" relation="greaterThanOrEqual" secondItem="8hw-sM-XIr" secondAttribute="centerY" constant="30" id="GgF-1Y-c2J"/>
+                            <constraint firstItem="GPX-6G-UJq" firstAttribute="centerX" secondItem="8hw-sM-XIr" secondAttribute="centerX" id="NWw-Iz-zi7"/>
+                            <constraint firstItem="MA1-FV-QB3" firstAttribute="centerX" secondItem="8hw-sM-XIr" secondAttribute="centerX" id="ORi-DT-ymN"/>
+                            <constraint firstItem="GPX-6G-UJq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="MA1-FV-QB3" secondAttribute="bottom" constant="40" id="j7N-1S-jO2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2qM-mQ-sQa"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tr9-Zi-qK1"/>
+                    <connections>
+                        <outlet property="eventDescription" destination="023-Kk-toV" id="VJm-y3-7vM"/>
+                        <outlet property="eventName" destination="MA1-FV-QB3" id="OWL-ov-pya"/>
+                        <outlet property="location" destination="rIh-HK-6ED" id="WV6-ea-VIP"/>
+                        <outlet property="stackView" destination="GPX-6G-UJq" id="3R7-ut-KWu"/>
+                        <outlet property="startTime" destination="HMo-f2-LVG" id="3Qv-NV-5GF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9O9-EU-AFG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3918.8405797101454" y="1522.7678571428571"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="L2T-Iy-Eey"/>
+        <segue reference="QQS-UD-cN8"/>
+        <segue reference="Tql-Nh-daP"/>
+    </inferredMetricsTieBreakers>
+</document>
