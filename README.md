@@ -1,14 +1,15 @@
 # trap-map-ios-app
 iOS application for finding events in your area
 
-![](./images/home-page.png)
+<img src="./images/home-page.png" width="300">
 
 # Features
 ### Find events in a specified location
-![](./images/find-events.png)
+<img src="./images/find-events.png" width="300">
 
 ### Create a new event
-![](./images/publish-event.png)
+<img src="./images/publish-event.png" width="300">
+
 
 ### Find a venue
-![](./images/find-venue.png)
+<img src="./images/find-venue.png" width="300">
