@@ -1,5 +1,5 @@
 # trap-map-ios-app
-iOS application for finding events in your area
+An iOS application for finding events near you! This application integrates the [Eventful API](https://api.eventful.com/docs) to search and update existing event and venue databases.
 
 <img src="./images/home-page.png" width="300">
 
